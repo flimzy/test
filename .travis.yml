@@ -2,5 +2,10 @@ language: go
 go:
     - 1.13.x
 
+install:
+    - curl -L -o /home/travis/gopath/bin/nancy https://github.com/sonatype-nexus-community/nancy/releases/download/v0.0.36/nancy-linux.amd64-v0.0.36
+    - chmod +x /home/travis/gopath/bin/nancy
+
 script:
+    - nancy Gopkg.lock
     - go test -race ./...
