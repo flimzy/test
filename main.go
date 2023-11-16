@@ -1,10 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"runtime/debug"
-)
+import "fmt"
 
 func main() {
-	fmt.Println(debug.ReadBuildInfo())
+	fmt.Println("Hello, world")
 }
